@@ -1,104 +1,63 @@
-@media (max-width: 768px) {
-    /* Navigation en colonne */
-    nav {
-        flex-direction: column;
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .lien_navigation {
-        flex-direction: column; /* Liens empilés */
-        gap: 10px; /* Espacement réduit entre les liens */
-        background-color: #A25353; /* Couleur d'arrière-plan du menu */
-        padding: 10px; /* Ajout de padding pour une meilleure présentation */
-        border-radius: 8px; /* Coins arrondis pour un effet esthétique */
-    }
-
-    .lien_navigation a {
-        font-size: 1.1rem; /* Taille du texte ajustée */
-        padding: 10px 15px; /* Espacement interne pour rendre les liens plus cliquables */
-        width: 100%; /* Lien prenant toute la largeur pour une meilleure ergonomie */
-        text-align: center; /* Centrer le texte */
-    }
-
-    /* Section compétences : meilleur alignement et espacement */
-    .competences-bloc {
-        flex-direction: row;
-        flex-wrap: wrap; /* Permet aux compétences de revenir à la ligne si nécessaire */
-        justify-content: center; /* Centrer les compétences */
-        gap: 15px; /* Espacement entre les compétences réduit */
-    }
-
-    .competence img {
-        width: 50px; /* Taille plus petite pour mobile */
-    }
-
-    /* Section à propos et général */
-    #a_propos, #competences, #projets, #contact {
-        padding: 20px 10px; /* Réduction du padding pour éviter les débordements */
-        text-align: center; /* Texte centré pour une meilleure lisibilité */
-    }
-
-    #a_propos h2 {
-        font-size: 2rem; /* Taille réduite du titre */
-    }
-
-    #a_propos p {
-        font-size: 1rem; /* Taille réduite du texte */
-        padding: 5px 10px; /* Réduire le padding sur les petits écrans */
-    }
-    
-    /* Section projets : adaptabilité */
-    .projet_bloc {
-        grid-template-columns: 1fr;
-        flex-direction: column; /* Projets en colonne */
-        align-items: center; /* Centrage */
-        gap: 15px; /* Espacement entre les projets */
-    }
-
-    .projet {
-        width: 90%; /* Réduction de la largeur */
-        padding: 15px;
-    }
-
-    #projets h2 {
-        font-size: 2rem;
-    }
-
-    .projet h3 {
-        font-size: 1.4rem;
-    }
-
-    .projet p {
-        font-size: 0.95rem;
-    }
-
-    /* Header */
-    header {
-        height: auto; /* Ajuste la hauteur pour éviter un grand espace vide */
-        padding: 20px;
-    }
-
-    .identite {
-        top: auto;
-        left: auto;
-        transform: none; /* Supprime le centrage transform */
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 1.8rem; /* Réduction de la taille pour mobile */
-    }
-
-    header p {
+/* Pour les tablettes (max-width: 1024px) */
+@media screen and (max-width: 1024px){
+    body{
         font-size: 1rem;
     }
 
-    /* Footer */
-    footer {
-        padding: 10px;
-        font-size: 0.9rem;
+    h1, h2, h3{
+        font-size: 2rem;
+    }
+
+    section, #a_propos, #competences, #projets, #contact{
+        width: 90%;
+        padding: 40px 20px;
+    }
+
+    .competence, .projet{
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .projet{
+        flex: 1 1 calc(50% - 20px);  /* Deux projets par ligne */
     }
 }
 
+/* Pour les téléphones (max-width: 768px) */
+@media screen and (max-width: 768px){
+    body{
+        font-size: 0.9rem;
+    }
 
+    h1, h2, h3{
+        font-size: 1.8rem;
+    }
+
+    section, #a_propos, #competences, #projets, #contact{
+        width: 100%;
+        padding: 30px 10px;
+    }
+
+    .competence, .projet{
+        padding: 6px;
+        margin: 6px;
+    }
+
+    .projet{
+        flex: 1 1 calc(100% - 20px);  /* Un seul projet par ligne */
+    }
+
+    header{
+        height: auto;  /* Ajuster la hauteur pour les petits écrans */
+    }
+
+    nav{
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .lien_navigation{
+        flex-direction: column;
+        gap: 10px;
+    }
+}

@@ -1,36 +1,52 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-h1, h2{
-    color: white;
-    padding-top: 40px;
+body{
+    color: #A25353;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #C18686;
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3{
     font-family: 'Georgia', serif;
     text-align: center;
     font-size: 2.5rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+}
+
+h1, h2{
+    color: white;
+    padding-top: 40px;
 }
 
 h3{
     color: #A25353;
     padding-top: 40px;
-    font-family: 'Georgia', serif;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 20px; 
 }
 
-body {
-    color: #A25353;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #C18686;
-    margin: 0;
-    scroll-behavior: smooth;
+section, #a_propos, #competences, #projets, #contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+    width: 80%;
 }
 
-header {
+section p, #a_propos p, #competences p, #projets p, #contact p{
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 800px;
+    margin: 10px auto;
+    padding: 10px 20px;
+}
+
+header{
     background-color: #A25353;
     color: white;
     text-align: center;
@@ -39,14 +55,13 @@ header {
     height: 100vh;
 }
 
-header h1 {
+header h1{
     font-size: 2.5rem;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;
-    margin: 0;
 }
 
-nav {
+nav{
     display: flex;
     justify-content: center;
     padding: 20px 0;
@@ -56,47 +71,26 @@ nav {
     width: 100%;
 }
 
-.lien_navigation {
+.lien_navigation{
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     gap: 20px;
     justify-content: center;
 }
 
-.lien_navigation a {
+.lien_navigation a{
     text-decoration: none;
     color: white;
     font-weight: bold;
 }
 
-.bloc a{
-    color: #054d3d;
-    text-decoration: underline; /* Reste souligné */
-}
-
-.identite {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    padding: 20px;
-    border-radius: 8px;
-    transform: translate(-50%, -50%);
-}
-
-.identite p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-}
-
-main {
+main{
     display: flex;
     flex-direction: column;
     padding: 100px 20px 20px;
 }
 
-.bloc {
+.bloc{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -105,62 +99,55 @@ main {
     text-align: center;
 }
 
-.bloc h2 {
+.bloc h2{
     font-size: 2rem;
-    margin-bottom: 20px;
 }
 
-#a_propos, #competences, #projets, #contact {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 20px;
-    margin: 50px auto;
-    width: 80%; /* Garde une largeur égale pour les sections */
+.bloc a{
+    color: #054d3d;
+    text-decoration: underline;
 }
 
-#a_propos p, #competences p, #projets p, #contact p {
+.identite{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+}
+
+.identite p{
     font-size: 1.2rem;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.85);
-    max-width: 800px;
-    margin: 10px auto;
-    padding: 10px 20px;
-    font-family: 'Verdana', sans-serif;
+    margin-top: 10px;
 }
 
-#competences .competences-bloc {
+#competences .competences-bloc{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-.competence {
+.competence, .projet{
     padding: 10px;
     background-color: #D5AEAE;
-    color: #281515;
     border-radius: 10px;
-    text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
     margin: 10px;
 }
 
-.competence img {
-    width: 80px; /* Taille de l'icône pour rester uniforme */
+.competence img{
+    width: 80px;
     height: auto;
     max-width: 100%;
     margin: 10px;
 }
 
-#projets {
-    padding: 40px 20;
-}
-
-#projets .projet_bloc {
+#projets .projet_bloc{
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -168,34 +155,29 @@ main {
     padding-bottom: 50px;
 }
 
-.projet {
+.projet{
     flex: 1 1 calc(45% - 20px);
     max-width: 300px;
-    background-color: #D5AEAE;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 15px 15px 10px;
-    text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding: 15px;
 }
 
-.projet a.btn-projet {
-    display: block; /* Transforme le lien en bloc pour pouvoir utiliser margin-top */
-    margin-top: auto; /* Aligne le lien en bas de la div */
-    text-align: center;
-}
-
-.projet img {
+.projet img{
     width: 100%;
     height: 200px;
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 0px;
 }
 
-.projet a {
+.projet a.btn-projet{
+    display: block;
+    margin-top: auto;
+    text-align: center;
+}
+
+.projet a{
     display: inline-block;
     padding: 10px 20px;
     color: white;
@@ -205,7 +187,7 @@ main {
     margin-top: 15px;
 }
 
-.projet p {
+.projet p{
     font-size: 1rem;
     color: #666;
     margin-bottom: 10px;
@@ -215,24 +197,22 @@ main {
     margin: 5% 0;
 }
 
-#contact blockquote {
-    font-size: 2rem; /* Augmenter la taille de la citation */
-    font-style: italic; /* Appliquer un style italique */
-    color: #ffffff; /* Rendre la citation blanche pour la contraster avec l'arrière-plan */
-    line-height: 1.6; /* Espacement des lignes pour plus de lisibilité */
-    margin-bottom: 30px; /* Espacement sous la citation */
-    padding: 20px; /* Ajouter un peu d'espace autour de la citation */
-    border-left: 5px solid #A25353; /* Ajouter une barre verticale à gauche pour un effet visuel */
-    font-family: 'Georgia', serif; /* Police élégante et facile à lire */
-    text-align: center; /* Centrer le texte */
+#contact blockquote{
+    font-size: 2rem;
+    font-style: italic;
+    color: #ffffff;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-left: 5px solid #A25353;
+    text-align: center;
 }
 
-#contact p {
-    margin: -10px; /* Ajuste la marge pour les paragraphes dans #contact uniquement */
+#contact p{
+    margin: -10px;
 }
 
-/* Footer */
-footer {
+footer{
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -242,8 +222,7 @@ footer {
     color: white;
 }
 
-footer p {
+footer p{
     font-size: 1rem;
 }
-
 
